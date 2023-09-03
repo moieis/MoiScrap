@@ -4,10 +4,23 @@ from pywebio.output import *
 from pywebio.pin import *
 from pywebio.platform import *
 import numpy
+import os
+from selenium import webdriver
+
 
 
 def man():
-    put_text(numpy.__file__)
+    put_text("start")
+    op = webdriver.ChromeOptions()
+    op.binary_location = os.environ.get("GB")
+    op.add_argument("--headless")
+    op.add_argument("--no-sandbox")
+    op.add_argument("--disable-dev-sh-usage")
+    driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
+    driver.get("https://youtube.com")
+    put_html(driver.page_source)
+    
+    
 
 
 if __name__ == '__main__':
