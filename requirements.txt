@@ -1,4 +1,39 @@
 numpy
 selenium
 pywebio
+tornado>=5.0
+user-agents
+openai
+pywebio
+# extra support
+flask
+django
+aiohttp
+starlette
+uvicorn[standard]
+aiofiles
+bokeh
+pandas
+cutecharts
+pyecharts
+plotly
+Pillow
+
+# test requirements
+selenium==3.*
+percy-python-selenium==0.1.3
+coverage
+
+# doc building requirements
+Jinja2==3.0.3
+sphinx==3.*
+sphinx-tabs
+sphinx-rtd-theme==0.4.*
+sphinx-toolbox==2.15.0
+sphinx-intl
+pywebio_battery
+
+# demo running requirements
+numpy
+matplotlib
 
