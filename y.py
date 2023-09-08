@@ -24,10 +24,15 @@ def man():
     op.add_argument("--headless")
     op.add_argument("--no-sandbox")
     op.add_argument("--disable-dev-sh-usage")
-    driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
-    # driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
+    try:
+        driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
+    except:
+        
+        driver = webdriver.Chrome(chrome_options=op)
+    time.sleep(3)
     driver.get("https://youtube.com")
-    put_html(driver.page_source)
+    put_text("done")
+    
     
     
 
