@@ -3,7 +3,6 @@ selenium
 pywebio
 tornado>=5.0
 user-agents
-openai
 pywebio
 # extra support
 flask
@@ -11,6 +10,7 @@ django
 aiohttp
 starlette
 uvicorn[standard]
+urllib3==1.26.15
 aiofiles
 bokeh
 pandas
