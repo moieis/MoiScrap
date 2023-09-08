@@ -19,18 +19,14 @@ app = Flask(__name__)
 
 def man():
     put_text("start")
-    op = webdriver.ChromeOptions()
-    op.binary_location = os.environ.get("GB")
-    op.add_argument("--headless")
-    op.add_argument("--no-sandbox")
-    op.add_argument("--disable-dev-sh-usage")
-    try:
-        driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
-    except:
-        
-        driver = webdriver.Chrome(chrome_options=op)
-    time.sleep(3)
-    driver.get("https://youtube.com")
+  
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     put_text("done")
     
     
