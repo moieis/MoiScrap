@@ -25,6 +25,7 @@ def man():
     op.add_argument("--no-sandbox")
     op.add_argument("--disable-dev-sh-usage")
     driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
+    # driver = webdriver.Chrome(executable_path= os.environ.get("C"), chrome_options=op)
     driver.get("https://youtube.com")
     put_html(driver.page_source)
     
@@ -46,7 +47,7 @@ if __name__ == '__main__':
     parser.add_argument("-p", "--port", type=int, default=8080)
     args = parser.parse_args()
 
-    start_server(man, port=args.port)
+    start_server(man, port=args.port,debug=True)
 
 
 
