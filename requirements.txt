@@ -18,7 +18,7 @@ cutecharts
 pyecharts
 plotly
 Pillow
-
+Flask
 # test requirements
 selenium==3.*
 percy-python-selenium==0.1.3
