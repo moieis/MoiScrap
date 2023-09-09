@@ -24,7 +24,7 @@ app = Flask(__name__)
 
 def man():
     T=[]
-    put([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
+    put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
              wight="150",hight="150"),None,None]])
     put_text("start")
     chrome_options = webdriver.ChromeOptions()
