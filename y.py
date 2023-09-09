@@ -13,14 +13,64 @@ from pywebio.output import *
 import argparse
 from pywebio import start_server
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from deep_translator import GoogleTranslator
+from pywebio import config
 
 app = Flask(__name__)
 
+@config(title='MyNews',manifest=True,css_style='''@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+  font-family: "Rocher";
+  text-align: center;
+  font-size: 5px;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+@font-palette-values --Grays {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+
+@font-palette-values --Mint {
+  font-family: Rocher;
+  base-palette: 7;
+}
+
+.grays {
+  font-palette: --Grays;
+}
+
+.purples {
+  font-palette: --Purples;
+}
+
+.mint {
+  font-palette: --Mint;
+}
+''')
 
 def man():
+    T=[]
     put_text("start")
-  
-
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
@@ -28,13 +78,48 @@ def man():
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     put_text("done")
+    driver.get("https://www.gemeentebest.nl/nieuws/")
+    time.sleep(2)
+    for i in range(4,11):
+                    driver.find_element(By.XPATH,f'//*[@id="content"]/div/div[{i}]/h2/a').text
+                    driver.find_element(By.XPATH,f'//*[@id="content"]/div/div[{i}]/h2/a').click()
+                    time.sleep(2)
+                    T.append(GoogleTranslator(source='auto', target='ar').translate(driver.find_element(By.XPATH,f'//*[@id="content"]/div').text))
+                    driver.back()
+                    time.sleep(2)
+
+
+
+
+    
+
+
+
+
+    s=0
+    for i in T:
+    
+    
+        if (s%2) == 0:
+                    put_html(f'''<h1 class="grays">{i}</h1>''')
+                    
+        else:
+                   
+        
+                    put_html(f'''
+                <h1 class="purples">{i}</h1>''')
+    
+        put_html('<hr>')
+    
+        s+=1
+      
+    
+        
+        
     
     
     
-
-
-
-
+    
 
 
 
