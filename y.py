@@ -65,10 +65,11 @@ def man():
 
 
 
-
+    driver.close()
+    toast("close my mageic cod 012")
     s=0
     for i in T:
-    
+     
     
         if (s%2) == 0:
                     put_html(f'''<h5>{i}</h5>''')
@@ -82,6 +83,7 @@ def man():
         put_html('<hr>')
     
         s+=1
+     
       
     
         
