@@ -37,6 +37,7 @@ def man():
              width="150px",height="150px"),None,None]])
     put_html("<hr>")
     
+    
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--no-sandbox")
@@ -54,6 +55,8 @@ def man():
                     T.append(GoogleTranslator(source='auto', target='ar').translate(driver.find_element(By.XPATH,f'//*[@id="content"]/div').text))
                     driver.back()
                     time.sleep(2)
+                    with use_scope(name="m",clear=True):
+                           put_grid([[None,None,None,put_html(f"<h1>{i}</h1>"),None,None]])
 
 
 
