@@ -25,7 +25,7 @@ app = Flask(__name__)
 def man():
     T=[]
     put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
-             wight="150",hight="150"),None,None]])
+             width="150px",higth="150px"),None,None]])
     put_text("start")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
