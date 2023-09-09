@@ -44,7 +44,7 @@ def man():
     chrome_options.add_argument("--disable-dev-shm-usage")
     
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-    put_text("done")
+    
     driver.get("https://www.gemeentebest.nl/nieuws/")
     time.sleep(2)
     for i in range(4,11):
@@ -68,13 +68,13 @@ def man():
     
     
         if (s%2) == 0:
-                    put_html(f'''<h3>{i}</h3>''')
+                    put_html(f'''<h5>{i}</h5>''')
                     
         else:
                    
         
                     put_html(f'''
-                <h3>{i}</h3>''')
+                <h5>{i}</h5>''')
     
         put_html('<hr>')
     
