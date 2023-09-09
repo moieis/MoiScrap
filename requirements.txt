@@ -15,6 +15,7 @@ aiofiles
 bokeh
 pandas
 cutecharts
+deep-translator
 pyecharts
 plotly
 Pillow
