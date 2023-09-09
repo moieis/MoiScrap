@@ -20,13 +20,23 @@ from pywebio import config
 
 app = Flask(__name__)
 
-@config(title='MyNews',manifest=True)
+@config(title='MyNews',manifest=True,css_style="""
+footer {
+ visibility: hidden;
+}     
+
+.footer {display:none;}
+footer {display:none;}
+
+ 
+""")
 
 def man():
     T=[]
     put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
-             width="150px",higth="150px"),None,None]])
-    put_text("start")
+             width="150px",height="150px"),None,None]])
+    put_html("<hr>")
+    
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     chrome_options.add_argument("--headless")
