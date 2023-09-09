@@ -101,13 +101,13 @@ def man():
     
     
         if (s%2) == 0:
-                    put_html(f'''<h1 class="grays">{i}</h1>''')
+                    put_html(f'''<h3>{i}</h3>''')
                     
         else:
                    
         
                     put_html(f'''
-                <h1 class="purples">{i}</h1>''')
+                <h3>{i}</h3>''')
     
         put_html('<hr>')
     
