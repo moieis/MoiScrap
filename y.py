@@ -20,56 +20,12 @@ from pywebio import config
 
 app = Flask(__name__)
 
-@config(title='MyNews',manifest=True,css_style='''@font-face {
-  font-family: "Rocher";
-  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
-}
-
-body {
-  font-family: "Rocher";
-  text-align: center;
-  font-size: 5px;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  margin: 0;
-}
-
-@font-palette-values --Grays {
-  font-family: Rocher;
-  base-palette: 9;
-}
-
-@font-palette-values --Purples {
-  font-family: Rocher;
-  base-palette: 6;
-}
-
-@font-palette-values --Mint {
-  font-family: Rocher;
-  base-palette: 7;
-}
-
-.grays {
-  font-palette: --Grays;
-}
-
-.purples {
-  font-palette: --Purples;
-}
-
-.mint {
-  font-palette: --Mint;
-}
-''')
+@config(title='MyNews',manifest=True)
 
 def man():
     T=[]
+    put([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
+             wight="150",hight="150"),None,None]])
     put_text("start")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
