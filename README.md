@@ -8,13 +8,6 @@
 </p>
 
 
-<style>
-.styled-gif {
-    width: 300px;
-    border: 2px solid blue;
-    border-radius: 10px;
-}
-</style>
 <img src="exm.gif" alt="" class="styled-gif" />
 
 
