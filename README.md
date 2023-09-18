@@ -8,10 +8,16 @@
 </p>
 
 
+<style>
+.styled-gif {
+    width: 300px;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+</style>
 
-<div style="text-align:center">
-    <img src="exm.gif" alt="Your GIF description" />
-</div>
+<img src="exm.gif" alt="Your GIF description" class="styled-gif" />
+
 
 
 
