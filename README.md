@@ -146,13 +146,13 @@ ___
 
 # DEPLOY heroku-22 :
 ___
-<span style="background-color: yellow;">Settings>>>>>Buildpacks: ADD:
+* Settings>>>>>Buildpacks: ADD:
 
-+heroku/python
-+https://github.com/heroku/heroku-buildpack-google-chrome
-+https://github.com/heroku/heroku-buildpack-chromedriver
+  * +heroku/python
+  *+https://github.com/heroku/heroku-buildpack-google-chrome
+  * +https://github.com/heroku/heroku-buildpack-chromedriver
 
-</span>
+
 
 ___
 
