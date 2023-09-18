@@ -114,3 +114,26 @@ def man():
 
 
 ___
+
+#### (4) Close the webapp circuit and identify the server ;
+---
+```
+
+
+
+
+app.add_url_rule('/tool', 'webio_view', webio_view(man),
+            methods=['GET', 'POST', 'OPTIONS'])
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-p", "--port", type=int, default=8080)
+    args = parser.parse_args()
+
+    start_server(man, port=args.port,debug=True)
+
+```
+
+
+___
