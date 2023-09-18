@@ -10,12 +10,11 @@
 
 <style>
 .styled-gif {
-    width: 200px;
-    border: 6px solid blue;
-    border-radius: 20px;
+    width: 300px;
+    border: 2px solid blue;
+    border-radius: 10px;
 }
 </style>
-
 <img src="exm.gif" alt="Your GIF description" class="styled-gif" />
 
 
