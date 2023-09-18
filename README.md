@@ -16,12 +16,24 @@
 
 
 ---
-#### Imports and requirements :
+#### (1) Imports and requirements ;
 ---
 ```
-import selesnim as alkjf
-
-def naem('sfs'):
-   print('hi')
+from pywebio.input import *
+from pywebio.output import *
+from pywebio.pin import *
+from pywebio.platform import *
+import numpy
+import os
+from pywebio.platform.flask import webio_view
+from pywebio import STATIC_PATH
+from flask import Flask, send_from_directory
+import argparse
+from pywebio import start_server
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+from deep_translator import GoogleTranslator
+from pywebio import config
 
 ```
