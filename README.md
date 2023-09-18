@@ -15,7 +15,7 @@
     border-radius: 10px;
 }
 </style>
-<img src="exm.gif" alt="Your GIF description" class="styled-gif" />
+<img src="exm.gif" alt="" class="styled-gif" />
 
 
 
