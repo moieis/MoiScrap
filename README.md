@@ -37,3 +37,23 @@ from deep_translator import GoogleTranslator
 from pywebio import config
 
 ```
+---
+#### (2) Start with build the webapp ;
+---
+```
+app = Flask(__name__)
+
+@config(title='MyNews',manifest=True,css_style="""
+footer {
+ visibility: hidden;
+}     
+
+.footer {display:none;}
+footer {display:none;}
+
+#Note: We are using the PyWebIo library here. We did not hide the library tag as an example, and we do not recommend imitating it as we do not consider stealing the content.
+ 
+""")
+
+
+```
