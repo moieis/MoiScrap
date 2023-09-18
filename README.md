@@ -149,10 +149,13 @@ ___
 * Settings>>>>>Buildpacks: ADD:
 
   * +heroku/python
-  *+https://github.com/heroku/heroku-buildpack-google-chrome
+  * +https://github.com/heroku/heroku-buildpack-google-chrome
   * +https://github.com/heroku/heroku-buildpack-chromedriver
+___
 
+* Settings>>>>>Config Vars: ADD:
 
-
+  * KEY:CHROMEDRIVER_PATH     VALUE:/app/.chromedriver/bin/chromedriver
+  * KEY:GOOGLE_CHROME_BIN     VALUE:/app/.apt/usr/bin/google-chrome
 ___
 
