@@ -12,3 +12,10 @@
 <div style="text-align:center">
     <img src="exm.gif" alt="Your GIF description" />
 </div>
+
+
+This is some text above the line.
+
+---
+
+This is some text below the line.
