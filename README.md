@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <img src="https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg" alt="Image Description">
+  <img src="https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg" alt="Image Description"  width="200" height="100">
 </p>
 
 
