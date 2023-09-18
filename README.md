@@ -10,9 +10,9 @@
 
 <style>
 .styled-gif {
-    width: 300px;
+    width: 200px;
     border: 6px solid blue;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 </style>
 
