@@ -11,8 +11,8 @@
 <style>
 .styled-gif {
     width: 300px;
-    border: 2px solid blue;
-    border-radius: 10px;
+    border: 6px solid blue;
+    border-radius: 40px;
 }
 </style>
 
