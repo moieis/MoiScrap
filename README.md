@@ -142,9 +142,17 @@ ___
 web: python YOUR_START_APP.py --port=$PORT
 ```
 
+___
 
-<select>
-  <option value="option1">Option 1</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
+# DEPLOY heroku-22 :
+___
+<span style="background-color: yellow;">Settings>>>>>Buildpacks: ADD:
+
++heroku/python
++https://github.com/heroku/heroku-buildpack-google-chrome
++https://github.com/heroku/heroku-buildpack-chromedriver
+
+</span>
+
+___
+
