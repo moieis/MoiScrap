@@ -8,6 +8,7 @@
 </p>
 
 
-<center>
-<img src="exm.gif.gif" alt="jl" />
-</center>
+
+<div style="text-align:center">
+    <img src="exm.gif.gif" alt="Your GIF description" />
+</div>
