@@ -4,5 +4,9 @@
 
 
      <div style="text-align:center">
-  <img src="https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg" alt="Image Description">
+  <img src="" alt="Image Description">
 </div>
+
+<p align="center">
+  <img src="https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg" alt="Image Description">
+</p>
