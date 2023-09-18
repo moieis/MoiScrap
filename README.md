@@ -154,8 +154,10 @@ ___
 ___
 
 * Settings>>>>>Config Vars: ADD:
+```
+ 1 + KEY:       CHROMEDRIVER_PATH            VALUE:       /app/.chromedriver/bin/chromedriver
+ 2 +  KEY:       GOOGLE_CHROME_BIN            VALUE:       /app/.apt/usr/bin/google-chrome
 
-  * KEY:CHROMEDRIVER_PATH     VALUE:/app/.chromedriver/bin/chromedriver
-  * KEY:GOOGLE_CHROME_BIN     VALUE:/app/.apt/usr/bin/google-chrome
+```
 ___
 
