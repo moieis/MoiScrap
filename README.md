@@ -10,5 +10,5 @@
 
 
 <div style="text-align:center">
-    <img src="exm.gif.gif" alt="Your GIF description" />
+    <img src="exm.gif" alt="Your GIF description" />
 </div>
