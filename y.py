@@ -48,6 +48,9 @@ def man():
     
     driver.get("https://www.gemeentebest.nl/nieuws/")
     time.sleep(2)
+    driver.save_screenshot("image.png")
+    dta=open('image.png','rb').read()
+    put_image(dta)
     for i in range(4,11):
                     driver.find_element(By.XPATH,f'//*[@id="content"]/div/div[{i}]/h2/a').text
                     driver.find_element(By.XPATH,f'//*[@id="content"]/div/div[{i}]/h2/a').click()
