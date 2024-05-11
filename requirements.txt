@@ -5,6 +5,7 @@ tornado>=5.0
 user-agents
 pywebio
 # extra support
+anticaptchaofficial
 pyTelegramBotAPI
 flask
 django
