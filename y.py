@@ -18,6 +18,45 @@ import time
 from deep_translator import GoogleTranslator
 from pywebio import config
 
+
+
+import telebot
+
+
+
+bot = telebot.TeleBot("7199127665:AAHflk6KytAKmxYBnPMssCNkhJO7h9mRRYM")
+
+@bot.message_handler(commands=['start', 'hello'])
+def send_welcome(message):
+    bot.reply_to(message, " مرحبا بك اسمي موي بوت !!\n قم بارسال رابط حساب الملف الشخصي من التيك تاك لاقوم بسحب البيانات لك \n⚠️ الرجاء عدم الاسائة والسعي للصلاح فلنا ولكم لقاء في يوما تشخص فيه الابصار .....  \n \n\n Hoi, my name is MoiBot :) !!\n*Send me the link of the profile account from tiktak to scrap the data for you. \n⚠️ Please do not offend and strive for goodness, We and you will meet on a day when the eyes will be blinded by the horror of the scene. .....")
+    print(message)
+
+
+
+
+def me(message):
+    return True
+@bot.message_handler(func=me)
+def send_welme(message):
+    print(message.text[0:4], message)
+    if message.text[0:18] in ['http',' htt','https://www.tiktok'] :
+        bot.reply_to(message, "⌛⏳")
+    
+        
+    elif len(message.text) == 1:
+        bot.reply_to(message, "😝")
+    elif len(message.text) == 2:
+        bot.reply_to(message, "😝😝")
+    elif len(message.text) < 4 or len(message.text) < 3 or len(message.text) < 2:
+        bot.reply_to(message, "😆😆😆😆😆")
+    
+    else:
+        bot.reply_to(message, "❌الرجاء ارسال رابط الملف الشخصي يجب ان يبدأ  [https://www.tiktok]❌\n\n\n❌ please enter valid link Must start with [https://www.tiktok]❌")
+        
+    
+
+bot.infinity_polling()
+
 app = Flask(__name__)
 
 @config(title='MyNews',manifest=True,css_style="""
@@ -32,11 +71,13 @@ footer {display:none;}
 """)
 
 def man():
+ 
     T=[]
     put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
              width="150px",height="150px"),None,None]])
     put_html("<hr>")
-    
+
+ 
     
     chrome_options = webdriver.ChromeOptions()
     # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
