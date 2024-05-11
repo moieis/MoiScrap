@@ -127,7 +127,7 @@ def send_welme(message):
          
             
         
-    .        
+            
     elif len(message.text) == 1:
         bot.reply_to(message, "😝")
     elif len(message.text) == 2:
