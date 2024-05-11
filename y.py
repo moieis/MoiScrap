@@ -58,9 +58,7 @@ def man():
     
     # 
     
-    options = webdriver.ChromeOptions()
-    options.add_argument('--headless')
-    driver = webdriver.Chrome(options=options)
+    
     
     
     
@@ -84,7 +82,7 @@ def man():
     
     g_response = solver.solve_and_return_solution()
     if g_response!= 0:
-        print("g_response"+g_response)
+        put_text("g_response"+g_response)
     else:
         print("task finished with error"+solver.error_code)
 
