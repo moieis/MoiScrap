@@ -42,7 +42,7 @@ def send_welcome(message):
     print(message)
 
 
-
+print('hi')
 
 def me(message):
     return True
@@ -151,10 +151,9 @@ def send_welme(message):
 
 
 
+bot.polling()
 
 
-
-bot.infinity_polling()
 
 
 
