@@ -1,1 +1,1 @@
-worker: python y.py
+web: python y.py --port=$PORT 
