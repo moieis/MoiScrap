@@ -1,1 +1,1 @@
-web: python y.py --port=$PORT 
+web: python y.py 
