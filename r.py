@@ -65,7 +65,9 @@ def man():
     url="https://zefoy.com/"
     driver.get(url)
     time.sleep(7)
-    driver.find_element(By.XPATH,'/html').screenshot('logoo.png')
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('logoo.png')
+    put_text(a.text)
     time.sleep(3)
     s=open('logoo.png','rb').read()
     time.sleep(3)
