@@ -62,53 +62,56 @@ def man():
     
     
     
-    url="https://shreateh.net/tiktok-applications/tiktok-osint.html"
+    url="https://zefoy.com/"
     driver.get(url)
-    time.sleep(3)
-    driver.find_element(By.XPATH,'/html/body/div[6]/div[2]/div[1]/div[2]/div[2]/button[1]').click()
+    time.sleep(7)
+    driver.save_screenshot('foo.png')
+    put_image('foo.png')
+    
+    # driver.find_element(By.XPATH,'/html/body/div[6]/div[2]/div[1]/div[2]/div[2]/button[1]').click()
     
     
     
     
-    sitekey = driver.find_element(By.CLASS_NAME, 'g-recaptcha').get_attribute('outerHTML')
-    sitekey_clean = sitekey.split('" data-callback')[0].split('data-sitekey="')[1].split('"')[0]
-    print(sitekey_clean)
-    solver = recaptchaV2Proxyless()
-    solver.set_verbose(1)
-    solver.set_key('f4b535a30e5de36c4d3e28e165a9f125')
-    solver.set_website_url(url)
-    solver.set_website_key(sitekey_clean)
+    # sitekey = driver.find_element(By.CLASS_NAME, 'g-recaptcha').get_attribute('outerHTML')
+    # sitekey_clean = sitekey.split('" data-callback')[0].split('data-sitekey="')[1].split('"')[0]
+    # print(sitekey_clean)
+    # solver = recaptchaV2Proxyless()
+    # solver.set_verbose(1)
+    # solver.set_key('f4b535a30e5de36c4d3e28e165a9f125')
+    # solver.set_website_url(url)
+    # solver.set_website_key(sitekey_clean)
     
-    g_response = solver.solve_and_return_solution()
-    if g_response!= 0:
-        put_text("g_response"+g_response)
-    else:
-        print("task finished with error"+solver.error_code)
+    # g_response = solver.solve_and_return_solution()
+    # if g_response!= 0:
+    #     put_text("g_response"+g_response)
+    # else:
+    #     print("task finished with error"+solver.error_code)
 
-    driver.execute_script('var element=document.getElementById("g-recaptcha-response"); element.style.display="";')
+    # driver.execute_script('var element=document.getElementById("g-recaptcha-response"); element.style.display="";')
     
-    driver.execute_script("""document.getElementById("g-recaptcha-response").innerHTML = arguments[0]""", g_response)
-    driver.execute_script('var element=document.getElementById("g-recaptcha-response"); element.style.display="none";')
+    # driver.execute_script("""document.getElementById("g-recaptcha-response").innerHTML = arguments[0]""", g_response)
+    # driver.execute_script('var element=document.getElementById("g-recaptcha-response"); element.style.display="none";')
     
-    profile=driver.find_element(By.ID,'khalil_vid')
-    profile.send_keys('https://www.tiktok.com/@omarsbshlen?is_from_webapp=1&sender_device=pc')
+    # profile=driver.find_element(By.ID,'khalil_vid')
+    # profile.send_keys('https://www.tiktok.com/@omarsbshlen?is_from_webapp=1&sender_device=pc')
     
-    time.sleep(3)
+    # time.sleep(3)
     
-    boton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/main/div/div[2]/p[6]/input')
-    boton.screenshot('foo.png')
-    boton.click()
-    time.sleep(5)
-    try:
+    # boton = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/main/div/div[2]/p[6]/input')
+    # boton.screenshot('foo.png')
+    # boton.click()
+    # time.sleep(5)
+    # try:
         
-        reso = driver.find_element(By.XPATH,'//*[@id="kresult"]/div').text
-        put_text("ff1")
-        put_text(reso)
-        put_image('foo.png')
-    except:
-        reso = driver.find_element(By.XPATH,'//*[@id="kresult"]').text
-        put_text("ff2")
-        put_text(reso)
+    #     reso = driver.find_element(By.XPATH,'//*[@id="kresult"]/div').text
+    #     put_text("ff1")
+    #     put_text(reso)
+    #     put_image('foo.png')
+    # except:
+    #     reso = driver.find_element(By.XPATH,'//*[@id="kresult"]').text
+    #     put_text("ff2")
+    #     put_text(reso)
         
         
          
