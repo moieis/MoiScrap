@@ -23,9 +23,8 @@ import time
 from anticaptchaofficial.recaptchav2proxyless import *
 
 
-print('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
 app = Flask(__name__)
-print('byyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy')
+
 @config(title='MyNews',manifest=True,css_style="""
 footer {
  visibility: hidden;
