@@ -65,8 +65,9 @@ def man():
     url="https://zefoy.com/"
     driver.get(url)
     time.sleep(7)
-    driver.save_screenshot('foo.png')
-    put_image('foo.png')
+    driver.save_screenshot('logoo.png')
+    time.sleep(4)
+    put_image('logoo.png')
     
     # driver.find_element(By.XPATH,'/html/body/div[6]/div[2]/div[1]/div[2]/div[2]/button[1]').click()
     
