@@ -66,6 +66,10 @@ def man():
     driver.get(url)
     time.sleep(7)
     a=driver.find_element(By.XPATH,'/html')
+    html = driver.page_source
+    time.sleep(2)
+    put_text(html)
+
     a.screenshot('logoo.png')
     put_text(a.text)
     time.sleep(3)
