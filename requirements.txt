@@ -3,6 +3,7 @@ selenium
 pywebio
 tornado>=5.0
 user-agents
+selenium-stealth
 pywebio
 # extra support
 anticaptchaofficial
