@@ -57,7 +57,7 @@ def man():
     # options.add_argument("--disable-dev-shm-usage")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    driver = uc.Chrome(options=options, executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver')
+    driver = uc.Chrome(chrome_options=options, executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver')
     
     stealth(driver,
             languages=["en-US", "en"],
