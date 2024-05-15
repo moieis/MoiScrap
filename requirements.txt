@@ -35,7 +35,7 @@ sphinx-rtd-theme==0.4.*
 sphinx-toolbox==2.15.0
 sphinx-intl
 pywebio_battery
-selenium-stealth
+undetected-chromedriver
 # demo running requirements
 numpy
 matplotlib
