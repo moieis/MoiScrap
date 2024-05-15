@@ -42,26 +42,64 @@ def man():
     put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
              width="150px",height="150px"),None,None]])
     put_html("<hr>")
+
+
+    
+    # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     import undetected_chromedriver as uc
+    from selenium import webdriver
     from selenium_stealth import stealth
-
-
-    user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.140 Safari/537.36"
-    chrome_options = uc.ChromeOptions()
-    chrome_options.add_argument('--headless=new')
-    chrome_options.add_argument("--start-maximized")
-    chrome_options.add_argument("user-agent={}".format(user_agent))
-    driver = uc.Chrome(executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver',options=chrome_options)
+    
+    options = webdriver.ChromeOptions() 
+    options.headless = True
+    options.add_argument("start-maximized")
+    # option.add_argument("--no-sandbox")
+    # options.add_argument("--disable-dev-shm-usage")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    driver = uc.Chrome(options=options, executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver')
+    
     stealth(driver,
             languages=["en-US", "en"],
             vendor="Google Inc.",
             platform="Win32",
             webgl_vendor="Intel Inc.",
             renderer="Intel Iris OpenGL Engine",
-            fix_hairline=True
-    )
-   
+            fix_hairline=True,
+            )
     
+    # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+ 
+    # import undetected_chromedriver as uc
+    # from selenium_stealth import stealth
+
+
+    # user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.6167.140 Safari/537.36"
+    # chrome_options = uc.ChromeOptions()
+    # chrome_options.add_argument('--headless=new')
+    # chrome_options.add_argument("--no-sandbox")
+    # chrome_options.add_argument("--start-maximized")
+    # chrome_options.add_argument("--disable-dev-shm-usage")
+    # chrome_options.add_argument("user-agent={}".format(user_agent))
+    # driver = uc.Chrome(executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver',options=chrome_options)
+    # stealth(driver,
+    #         languages=["en-US", "en"],
+    #         vendor="Google Inc.",
+    #         platform="Win32",
+    #         webgl_vendor="Intel Inc.",
+    #         renderer="Intel Iris OpenGL Engine",
+    #         fix_hairline=True
+    # )
+   
+    # ___________________________________________________________________
     
     # chrome_options = webdriver.ChromeOptions()
     # # # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
@@ -80,7 +118,7 @@ def man():
     
     
     
-    url="https://zefoy.com/"
+    url="https://zefoy.com/#google_vignette"
     driver.get(url)
     time.sleep(7)
     a=driver.find_element(By.XPATH,'/html')
