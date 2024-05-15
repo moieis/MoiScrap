@@ -42,8 +42,34 @@ def man():
     put_grid([[None,None,None,put_image("https://png.pngtree.com/template/20190323/ourmid/pngtree-a-letter-triangle-logo-image_81987.jpg",
              width="150px",height="150px"),None,None]])
     put_html("<hr>")
-
- 
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium_stealth import stealth
+    
+    options = webdriver.ChromeOptions()
+    options.add_argument("start-maximized")
+    options.add_argument("--headless")
+    options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    options.add_experimental_option('useAutomationExtension', False)
+    
+    
+    driver = webdriver.Chrome(executable_path=r'/app/.chrome-for-testing/chromedriver-linux64/chromedriver', options=options)
+    
+    stealth(driver,
+            languages=["en-US", "en"],
+            vendor="Google Inc.",
+            platform="Win32",
+            webgl_vendor="Intel Inc.",
+            renderer="Intel Iris OpenGL Engine",
+            fix_hairline=True,
+    )
+    
+    driver.get("https://bot.sannysoft.com/")
+    
+    print(driver.find_element(By.XPATH, "/html/body").text)
+    
+    driver.close()
+     
     
     chrome_options = webdriver.ChromeOptions()
     # chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
