@@ -118,7 +118,7 @@ def man():
     
     
     
-    url="https://zefoy.com/#google_vignette"
+    url="https://homedecoratione.com/"
     driver.get(url)
     time.sleep(7)
     a=driver.find_element(By.XPATH,'/html')
