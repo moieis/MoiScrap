@@ -52,7 +52,7 @@ def man():
     
     options = webdriver.ChromeOptions() 
     options.headless = True
-    options.add_argument("start-maximized")
+    # options.add_argument("start-maximized")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -116,23 +116,129 @@ def man():
     
     
     
+        # import undetected_chromedriver as uc
+    import time
+    # from selenium import webdriver
+    from selenium.webdriver.common.action_chains import ActionChains
+    from selenium.webdriver.common.by import By
+    from selenium import webdriver
+    from selenium.webdriver.common.action_chains import ActionChains
+    
+    # Setup the WebDriver (e.g., ChromeDriver)
     
     
-    url="https://homedecoratione.com/"
-    driver.get(url)
-    time.sleep(7)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    # ######################################################################NOWNWWWWWW########################################
+    
+    # options = webdriver.ChromeOptions() 
+    # options.headless = True
+    # # options.add_argument("start-maximized")
+    # options.add_argument("--no-sandbox")
+    # options.add_argument('--headless=new')
+    # options.add_argument("--disable-dev-shm-usage")
+    # # options.add_argument("window-size=1400,600")
+    # # options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    # # options.add_experimental_option('useAutomationExtension', False)
+    # # driver = uc.Chrome(options=options)
+    # driver = webdriver.Chrome(options=options)
+    driver.get("https://zefoy.com/")
+    
+    
+    
+    # Define the coordinates you want to click on
+    x_coord = 54
+    y_coord = 290
+    
+    
+    
+    # Cleanup: close the browser
+    time.sleep(10)
+    print('screen after 10 sec')
+    
     a=driver.find_element(By.XPATH,'/html')
-    html = driver.page_source
-    time.sleep(2)
-    put_text(html)
-
-    a.screenshot('logoo.png')
-    put_text(a.text)
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
     time.sleep(3)
-    s=open('logoo.png','rb').read()
+    s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
+    put_image(s)
+    time.sleep(7)
+    print('start')
+    time.sleep(6)
+    print('did')
+    # Create an instance of ActionChains
+    actions = ActionChains(driver)
+    
+    
+    # Move to the specified coordinates and click
+    actions.move_by_offset(x_coord, y_coord).click().perform()
+    time.sleep(2)
+    print('screen after click')
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(3)
+    s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
+    put_image(s)
+    
+    a=driver.find_element(By.XPATH,'/html')
+    s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
     time.sleep(3)
     put_image(s)
-    put_text('sdfsdfdkfjhgkjdhfgkj')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(3)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(2)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(2)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(2)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(2)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(3)
+    a=driver.find_element(By.XPATH,'/html')
+    a.screenshot('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png')
+    time.sleep(3)
+    s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
+    put_image(s)
+    # s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
+
+
+
+
+
+# ################################################################################################################
+##################################################################################################################
+###########################################################################################################
+    # url="https://homedecoratione.com/"
+    # driver.get(url)
+    # time.sleep(7)
+    # a=driver.find_element(By.XPATH,'/html')
+    # html = driver.page_source
+    # time.sleep(2)
+    # put_text(html)
+
+    # a.screenshot('logoo.png')
+    # put_text(a.text)
+    # time.sleep(3)
+    # s=open('logoo.png','rb').read()
+    # time.sleep(3)
+    # put_image(s)
+    # put_text('sdfsdfdkfjhgkjdhfgkj')
     
     # driver.find_element(By.XPATH,'/html/body/div[6]/div[2]/div[1]/div[2]/div[2]/button[1]').click()
     
