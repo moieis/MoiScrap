@@ -218,6 +218,8 @@ def man():
     time.sleep(3)
     s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
     put_image(s)
+    actions = ActionChains(driver)
+    # Move to the specified coordinates and click
     actions.move_by_offset(x_coord, y_coord).click().perform()
     time.sleep(3)
     a=driver.find_element(By.XPATH,'/html')
@@ -268,6 +270,8 @@ def man():
     s=open('lfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff.png','rb').read()
     put_image(s)
     time.sleep(3)
+    actions = ActionChains(driver)
+    # Move to the specified coordinates and click
     actions.move_by_offset(x_coord, y_coord).click().perform()
     time.sleep(15)
     a=driver.find_element(By.XPATH,'/html')
