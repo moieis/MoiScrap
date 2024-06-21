@@ -157,7 +157,7 @@ def man():
     
     
     # Define the coordinates you want to click on
-    x_coord = 54
+    x_coord = 59
     y_coord = 290
     
     
